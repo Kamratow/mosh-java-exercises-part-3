@@ -12,10 +12,8 @@ public class ExceptionsDemo {
             var value = reader.read();
             System.out.println(value);
             new SimpleDateFormat().parse("");
-        } catch (IOException e) {
+        } catch (IOException | ParseException e) {
             System.out.println("Failed to read the file");
-        } catch (ParseException e) {
-            throw new RuntimeException(e);
         }
     }
 }
